@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import photoTeacher23 from '../../images/photoTeacher23.jpg';
+import photoTeacher from '../../images/photoTeacher.jpg';
 import iconArrow from '../../images/iconArrow.png';
 
 const StyledAboutMe = styled.div`
@@ -184,7 +184,7 @@ const AboutMe = () => {
           <div className="flex">
             <img
               alt="photo_teacher"
-              src={photoTeacher23}
+              src={photoTeacher}
               className="aboutMe-photoTeacher"
             />
             <div className="aboutMe-greating">
