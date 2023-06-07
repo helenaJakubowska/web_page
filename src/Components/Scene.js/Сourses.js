@@ -1,19 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import upLevel from '../../../images/upLevel.jpg';
-import forUniversity from '../../../images/forUniversity.jpg';
-import forKids from '../../../images/forKids.jpg';
-import forSpeak from '../../../images//forSpeak.jpg';
-import forIT from '../../../images/forIT.jpg';
+import upLevel from '../../images/upLevel.jpg';
+import forUniversity from '../../images/forUniversity.jpg';
+import forKids from '../../images/forKids.jpg';
+import forSpeak from '../../images//forSpeak.jpg';
+import forIT from '../../images/forIT.jpg';
 import { Link } from 'react-router-dom';
 
 const StyledCourses = styled.div`
   max-width: 1500px;
 
   .courses-title {
+    color: mediumseagreen;
     margin-top: 80px;
     text-align: center;
-    color: #4546ecff;
+
     font: small-caps bold 30px/2 cursive;
   }
 
@@ -30,8 +31,16 @@ const StyledCourses = styled.div`
     margin: 55px 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
+    .courses-variants-item-title {
+      display: inline-block;
+      color: #faba15ff;
+    }
     .courses-variants-item-img {
+      display: block;
       margin-top: 20px;
       width: 200px;
       height: 140px;
@@ -41,9 +50,15 @@ const StyledCourses = styled.div`
   .courses-variants-item:hover {
     scale: calc(1.2);
     transition-duration: 0.6s;
-
     border: 1px solid #fab400ff;
     border-radius: 10px;
+  }
+
+  .courses-variants-item-link {
+    color: #4546ecff;
+    font: small-caps bold 15px/2 cursive;
+    margin-top: 30px;
+    text-decoration: none;
   }
 `;
 const courses = [
@@ -73,14 +88,18 @@ const courses = [
 const Courses = () => {
   const listCourses = courses.map((course) => (
     <li className="courses-variants-item" key={course.title}>
-      {course.title}
+      <h6 className="courses-variants-item-title">{course.title}</h6>
       <img
         alt="imageForCourse"
         className="courses-variants-item-img "
         key={course.index}
         src={course.imgOfCourse}
       ></img>
-      <Link key={course.to} to={course.to}>
+      <Link
+        className="courses-variants-item-link"
+        key={course.to}
+        to={course.to}
+      >
         {' '}
         Подробнее...
       </Link>

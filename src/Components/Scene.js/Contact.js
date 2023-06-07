@@ -6,10 +6,11 @@ import telegram from '../../images/telegram.png';
 import linkedin from '../../images/linkedin.png';
 
 const ContactStyled = styled.div`
+  padding-top: 80px;
   max-width: 1500px;
 
   .contact-title {
-    margin-top: 80px;
+    margin-top: 10px;
     text-align: center;
     color: #4546ecff;
     font: small-caps bold 30px/2 cursive;
@@ -21,14 +22,19 @@ const ContactStyled = styled.div`
     margin: 15px;
   }
   .contact-image {
-    width: 50px;
-    height: 50px;
-    margin: 15px;
+    width: 80px;
+    height: 80px;
+    margin: 25px;
   }
 
   .contact-info {
     margin-top: 25px;
     font: small-caps bold 20px/2 cursive;
+  }
+
+  .contact-image:hover {
+    scale: calc(1.2);
+    transition: 0.2s;
   }
 `;
 

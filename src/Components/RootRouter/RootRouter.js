@@ -3,8 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from '../Layout/Layout';
 import AboutMe from '../Scene.js/AboutMe';
 import Home from '../Scene.js/Home';
-import Courses from '../Scene.js/Courses/Сourses';
-import Course from '../Scene.js/Courses/Course/Course';
+import Courses from '../Scene.js/Сourses';
+import Reviews from '../Scene.js/Reviews';
+
 import Contact from '../Scene.js/Contact';
 
 const RootRouter = () => {
@@ -14,7 +15,7 @@ const RootRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="aboutMe" element={<AboutMe />} />
         <Route path="courses" exact element={<Courses />} />
-        <Route path="courses/:title" element={<Course />} />
+        <Route path="reviews" element={<Reviews />} />
         <Route path="contacts" element={<Contact />} />
       </Route>
     </Routes>

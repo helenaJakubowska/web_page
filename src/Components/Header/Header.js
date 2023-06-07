@@ -94,7 +94,11 @@ const Header = () => {
               все о курсах
             </Link>
           </li>
-          <li className="header-nav-item">отзывы</li>
+          <li className="header-nav-item">
+            <Link className="link" to={'reviews'}>
+              отзывы
+            </Link>
+          </li>
           <li className="header-nav-item">
             <Link className="link" to={'contacts'}>
               контакты
