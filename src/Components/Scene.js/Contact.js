@@ -7,13 +7,17 @@ import linkedin from '../../images/linkedin.png';
 
 const ContactStyled = styled.div`
   padding-top: 80px;
-  max-width: 1500px;
+  width: 100%;
 
   .contact-title {
     margin-top: 10px;
     text-align: center;
     color: #4546ecff;
-    font: small-caps bold 30px/2 cursive;
+    font: small-caps bold 34px/2 cursive;
+  }
+
+  .contact-flex {
+    display: flex;
   }
 
   .contact-item {
@@ -70,8 +74,11 @@ const Contact = () => {
 
   return (
     <ContactStyled>
-      <h3 className="contact-title">Контакты</h3>
-      <ul className="contacts">{listOfContacts}</ul>
+      <h3 className="contact-title">Мои контакты</h3>
+      <div className="contact-flex">
+        <ul className="contacts">{listOfContacts}</ul>
+        <div className="myContatact"></div>
+      </div>
     </ContactStyled>
   );
 };

@@ -31,6 +31,7 @@ const ReviewStyled = styled.div`
     width: 22%;
     height: 22%;
     border: 2px solid #fab400ff;
+    border-radius: 15% 15% 15% 2%;
     padding: 5px;
     margin: 15px;
     background-image: url({review.image});

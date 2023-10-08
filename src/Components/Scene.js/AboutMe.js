@@ -51,7 +51,7 @@ const StyledAboutMe = styled.div`
   .aboutMe-greating-advantages {
     font: small-caps bold 26px/2 cursive;
     color: #00a08bff;
-    margin: 0 auto;
+    margin: 0 auto 100px;
   }
 
   .accordion-wrapper {
